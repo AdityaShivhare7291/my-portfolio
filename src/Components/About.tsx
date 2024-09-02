@@ -39,7 +39,7 @@ const About = () => {
                 </div>
                 <div className="h-fit flex justify-center items-center rounded-full bs:mr-10 w-fit">
                     <NeonGradientCard className="w-[325px] h-[325px] lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 items-center justify-center text-center">
-                        <img  src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="profile" className="w-full  h-full rounded-full " />
+                        <img  src={`${process.env.PUBLIC_URL}/profile.jpeg`} alt="profile" className="w-full  h-full rounded-full " />
                         {/* <img src={`${process.env.PUBLIC_URL}/Ekart.png`} alt="Ekart" /> */}
                     </NeonGradientCard>
                 </div>

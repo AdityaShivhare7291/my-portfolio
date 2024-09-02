@@ -32,7 +32,7 @@ const ProjectInfo = [
         image: "Portfolio.png",
         live: false,
         technologies: ["React", "Typescript", "Tailwind"],
-        link: "https://portfolio-kuldeeps-projects-3c7ed0c8.vercel.app/",
+        link: "https://portfolio-tau-brown-41.vercel.app/",
         github: "https://github.com/kuldeep1441/Portfolio.git"
     },
     // {
