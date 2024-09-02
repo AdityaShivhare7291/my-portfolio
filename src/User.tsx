@@ -32,8 +32,8 @@ const ProjectInfo = [
         image: "Portfolio.png",
         live: false,
         technologies: ["React", "Typescript", "Tailwind"],
-        link: "https://github.com/Code-Mars/Spotify-Clone",
-        github: "https://github.com/Code-Mars/Spotify-Clone"
+        link: "https://portfolio-kuldeeps-projects-3c7ed0c8.vercel.app/",
+        github: "https://github.com/kuldeep1441/Portfolio.git"
     },
     // {
     //     title: "Travel Tracker",
