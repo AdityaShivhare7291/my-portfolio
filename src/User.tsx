@@ -1,42 +1,30 @@
-import { IconBrandGithub, IconBrandInstagram, IconBrandLeetcode, IconBrandLinkedin, IconBrandYoutube , IconCode, IconTerminal} from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLeetcode, IconBrandLinkedin, IconCode, IconTerminal } from "@tabler/icons-react";
 const Info = {
-    name: "Kuldeep",
-    stack: ["Software Engineer", "Full Stack Developer"],
+    name: "Aditya",
+    stack: ["Software Engineer", "Full Stack Developer", "Frontend Developer", "Backend Developer"],
     bio: `Passionate software engineer dedicated to building efficient, scalable, and impactful web applications. I thrive on solving complex problems, taking full ownership of tasks, and delivering high-quality digital experiences. Let’s connect and build something extraordinary together!`
 }
 
-
-
 const ProjectInfo = [
     {
-        title: "BookShoppe E-comm App",
-        desc: "BookShoppe is a modern, fully responsive e-commerce platform built using React, Vite, TailwindCSS, Redux, and MaterialUI, offering a seamless shopping experience across different book categories. It features secure user authentication with login, registration, and logout functionalities. Users can add items to a cart or remove them, search for specific products and purchase them. The checkout process includes form validation for address and payment information, ensuring accuracy and security. After purchase, users can view their order history in the Orders section. BookShoppe combines robust functionality, intuitive design, making online Book shopping effortless and enjoyable.",
-        image: "BookShoppe.png",
-        live: true,
-        technologies: ["MERN", "Vite", "Tailwind", "Redux"],
-        link: "https://book-shoppe.vercel.app/",
-        github: "https://github.com/kuldeep1441/BookShoppe.git"
+        title: "Interview Prep Chrome Plugin",
+        desc: "A Chrome extension that aggregates a curated list of career-related pages and articles from platforms like LinkedIn and GeeksforGeeks. Features Chrome Text-to-Speech (TTS) integration—when users click on any post or article, the plugin reads it aloud, enhancing accessibility and multitasking for job seekers.",
+        image: "interview-prep.png",
+        live: false,
+        technologies: ["Chrome Extension", "JavaScript", "TTS API"],
+        link: "",
+        github: "" // Add if available
     },
     {
-        title: "ApnaGPT",
-        desc: "ApnaGPT is an advanced MERN stack application integrated with OpenAI's API to deliver intelligent features like text summarization, chatbot interactions, JavaScript code generation, and text-to-image conversion. The platform supports secure user authentication, ensuring privacy and data protection. Users can interact with a responsive chatbot, generate sci-fi images, or receive JavaScript code suggestions. The application showcases the powerful combination of AI and web development, providing users with a dynamic and engaging experience..",
-        image: "ApnaGPT.png",
+        title: "Anonymous Chat System",
+        desc: "A MERN stack-based real-time chat system enabling users to interact anonymously through WebSocket. The platform also includes a marketplace feature where users can rent or sell products. Ensures secure, real-time communication and transactional capabilities within a single app.",
+        image: "anonymous-chat.png",
         live: false,
-        technologies: ["MERN", "OpenAI", "Bootstrap", "Redux"],
-        link: "https://github.com/kuldeep1441/ApnaGPT.git",
-        github: "https://github.com/kuldeep1441/ApnaGPT.git"
-    },
-    {
-        title: "Portfolio",
-        desc: "The Portfolio Website is a personal project developed using Typescript, React, and Tailwind, and is deployed on Vercel. It features a clean, intuitive design with sections dedicated to About, Home, and Projects, allowing easy navigation. The Contact Us section is integrated to enable visitor interaction, with MongoDB handling the efficient storage and management of visitor details. This portfolio highlights technical skills, project experiences, and provides a seamless way for potential employers and collaborators to connect.",
-        image: "Portfolio.png",
-        live: false,
-        technologies: ["React", "Typescript", "Tailwind"],
-        link: "https://portfolio-tau-brown-41.vercel.app/",
-        github: "https://github.com/kuldeep1441/Portfolio.git"
-    },
-]
-
+        technologies: ["MERN", "WebSocket", "Node.js", "MongoDB"],
+        link: "",
+        github: "" // Add if available
+    }
+];
 
 const SkillInfo = [
     {
@@ -46,7 +34,7 @@ const SkillInfo = [
     },
     {
         title: "Backend",
-        skills: [ "Node JS", "Express JS", "MongoDB", "MySQL", "NestJS"]
+        skills: ["Node JS", "Express JS", "MongoDB", "MySQL", "NestJS"]
     },
     {
         title: "Languages",
@@ -58,30 +46,37 @@ const SkillInfo = [
     }
 ]
 const socialLinks = [
-    { link: "https://github.com/kuldeep1441", icon: IconBrandGithub },
-    { link: "https://www.linkedin.com/in/kuldeep-tanwar-61b748237/", icon: IconBrandLinkedin },
-    { link: "https://leetcode.com/u/kuldeep_kd/", icon: IconBrandLeetcode },
-    { link: "https://www.geeksforgeeks.org/user/kuldeep1441/", icon: IconCode }, 
-    { link: "https://www.interviewbit.com/profile/kuldeep_kd/", icon: IconTerminal }
+    { link: "https://github.com/AdityaShivhare7291/", icon: IconBrandGithub },
+    { link: "https://www.linkedin.com/in/aditya-shivhare-5b0314226/", icon: IconBrandLinkedin },
+    { link: "https://leetcode.com/u/adityashivhare7291/", icon: IconBrandLeetcode },
+    { link: "https://www.geeksforgeeks.org/user/adityashivhare7291/", icon: IconCode },
 ];
 
 
 const ExperienceInfo = [
     {
-        role: "Software Development Engineer",
-        company: "Digiaccel Learning (Altera Institute)",
-        date: "Nov 2024 - Present",
-        desc: "Full-stack engineer with proven expertise in building scalable web platforms and robust automation frameworks. Demonstrated full ownership of projects like DigiCampus and program-application management systems, optimizing workflows and enhancing user experience.",
-        skills: ["Javascript", "Typescript", "Next Js", "Node Js", "Nest Js", "and cross-functional collaboration to ensure high-performance delivery across B2B and B2C products"]
+        role: "Software Development Engineer Intern",
+        company: "Digiaccel (Altera Institute)",
+        date: "Jan 2025 – Present",
+        desc: "Worked on full-stack development using Next.js and Nest.js. Contributed to building a shared enum npm package for type consistency across backend and frontend, and participated in the development of a learner simulation game using Server-Sent Events (SSE). Optimized build performance using Webpack Analyzer and Lighthouse.",
+        skills: ["Next.js", "Nest.js", "TypeScript", "SSE", "Webpack", "Lighthouse", "NPM"]
     },
     {
-        role: "Software Developer Intern",
-        company: "Vilihi Virtual Services",
-        date: "January 2024 - June 2024",
-        desc: "I worked on the development of Mult-Vendor E-commerce website using  MERN, Redux, and Tailwind, creating scalable microservices and interfaces. I optimized performance by integrating frontend and backend, and enhanced security with RESTful APIs. Collaborating in teams, I fostered innovation and efficiency for top-quality solutions.",
-        skills: ["MongoDB", "Express", "React JS", "Node JS", "Redux", "Tailwind Css"]
+        role: "Software Development Engineer Intern",
+        company: "Redscope",
+        date: "Mar 2024 – Aug 2024",
+        desc: "Built a Chrome extension for tracking user activity and an Electron desktop app for visualizing website usage data. Added real-time data streaming capabilities in a React-based application for live updates and seamless UI interactions.",
+        skills: ["React.js", "Node.js", "JavaScript", "Electron", "Chrome Extension", "WebSockets"]
     },
-]
+    {
+        role: "Backend Developer Intern",
+        company: "FirstRicoz",
+        date: "Sep 2023 – Dec 2023",
+        desc: "Worked on Ads-Impact project to analyze and measure advertising effectiveness. Built secure API flows for user consent to access ad accounts, managed token storage, and integrated data from LinkedIn and Twitter APIs for campaign analytics.",
+        skills: ["MongoDB", "Express.js", "Node.js", "LinkedIn API", "Twitter API", "OAuth", "Security"]
+    }
+];
+
 const Slugs = [
     "typescript",
     "spring",
@@ -120,4 +115,4 @@ const Slugs = [
     "sonarqube",
     "figma",
 ];
-export { Info, ProjectInfo,socialLinks, SkillInfo, ExperienceInfo, Slugs };
+export { Info, ProjectInfo, socialLinks, SkillInfo, ExperienceInfo, Slugs };
