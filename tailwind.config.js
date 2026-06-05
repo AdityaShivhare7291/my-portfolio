@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         bgColor: "#112240",
         primaryColor: "#64FFDA",
-        textColor: "#8892B0"
+        textColor: "#B8C7D9"
       },
       animation: {
         backgroundPositionSpin:

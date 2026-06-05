@@ -58,21 +58,34 @@ const ExperienceInfo = [
         role: "Software Development Engineer Intern",
         company: "Digiaccel (Altera Institute)",
         date: "Jan 2025 - Present",
-        desc: "Worked on full-stack development using Next.js and Nest.js. Contributed to building a shared enum npm package for type consistency across backend and frontend, and participated in the development of a learner simulation game using Server-Sent Events (SSE). Optimized build performance using Webpack Analyzer and Lighthouse.",
+        desc: [
+            "Worked on full-stack development using Next.js and Nest.js.",
+            "Built a shared enum npm package for type consistency across backend and frontend.",
+            "Contributed to a learner simulation game using Server-Sent Events (SSE).",
+            "Optimized build performance using Webpack Analyzer and Lighthouse."
+        ],
         skills: ["Next.js", "Nest.js", "TypeScript", "SSE", "Webpack", "Lighthouse", "NPM"]
     },
     {
         role: "Software Development Engineer Intern",
         company: "Redscope",
         date: "Mar 2024 - Aug 2024",
-        desc: "Built a Chrome extension for tracking user activity and an Electron desktop app for visualizing website usage data. Added real-time data streaming capabilities in a React-based application for live updates and seamless UI interactions.",
+        desc: [
+            "Built a Chrome extension for tracking user activity.",
+            "Developed an Electron desktop app for visualizing website usage data.",
+            "Added real-time data streaming capabilities in a React application for live updates and smoother UI interactions."
+        ],
         skills: ["React.js", "Node.js", "JavaScript", "Electron", "Chrome Extension", "WebSockets"]
     },
     {
         role: "Backend Developer Intern",
         company: "FirstRicoz",
         date: "Sep 2023 - Dec 2023",
-        desc: "Worked on Ads-Impact project to analyze and measure advertising effectiveness. Built secure API flows for user consent to access ad accounts, managed token storage, and integrated data from LinkedIn and Twitter APIs for campaign analytics.",
+        desc: [
+            "Worked on the Ads-Impact project to analyze and measure advertising effectiveness.",
+            "Built secure API flows for user consent to access ad accounts.",
+            "Managed token storage and integrated LinkedIn and Twitter APIs for campaign analytics."
+        ],
         skills: ["MongoDB", "Express.js", "Node.js", "LinkedIn API", "Twitter API", "OAuth", "Security"]
     }
 ];

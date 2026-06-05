@@ -78,13 +78,31 @@ const Contact = () => {
     });
 
     return (
-        <div className="px-16 md-mx:px-8 sm-mx:px-4 mx-20 lg-mx:mx-10 md-mx:mx-0 my-10 font-mono" id="Contact">
-            <h1 className="text-4xl sm-mx:text-3xl xs-mx:text-2xl mb-10 font-bold text-center text-white">
-                <span className="text-primaryColor">05.&nbsp;</span>Contact
-            </h1>
-            <div data-aos="flip-left" data-aos-duration="800" className="w-[70%] lg-mx:w-full shadow-[0_0_10px_0_#64FFDA50] m-auto flex flex-col gap-6 border border-primaryColor p-8 rounded-3xl sm-mx:p-4">
+        <section className="terminal-shell my-10 font-mono" id="Contact">
+            <div className="terminal-inner">
+            <div className="section-head">
+                <div className="section-title-wrap">
+                    <h1 className="section-title">
+                        <span className="section-kicker">05.&nbsp;</span>Contact
+                    </h1>
+                    <p className="section-subcopy">If you want to discuss engineering roles, product ideas, or collaboration, send a message and I’ll get back with context, not just a generic reply.</p>
+                </div>
+                <div className="section-meta">Inbox Open</div>
+            </div>
+            <div className="mb-8 flex justify-start">
+                <div className="terminal-tag">open contact --interactive</div>
+            </div>
+            <div className="contact-shell">
+                <div className="contact-info-card">
+                    <div className="terminal-tag mb-4">contact.map</div>
+                    <div className="text-2xl text-white font-semibold mb-4" style={{fontFamily:"'Space Grotesk', sans-serif"}}>Let's Connect</div>
+                    <div className="contact-info-line">Based in India and open to software engineering opportunities, internships, freelance builds, and collaborative product work.</div>
+                    <div className="contact-info-line">Best for: frontend/backend roles, React/Next/Nest projects, browser tooling, and real-time product experiences.</div>
+                    <div className="contact-info-line">Response style: thoughtful, technical, and direct.</div>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="800" className="contact-form-card flex flex-col gap-6 border border-primaryColor p-8 sm-mx:p-4">
                 <div className="text-3xl flex gap-2 items-center text-white font-semibold sm-mx:text-2xl xs-mx:text-xl">
-                    Let's Connect
+                    Start a Message
                     <IconTopologyStar3 className="w-10 text-primaryColor h-10 sm-mx:w-7 sm-mx:h-7" />
                 </div>
                 <FloatingInput id="name" name="Name" value={formData.name} handleChange={handleChange} error={formError.name} />
@@ -103,8 +121,10 @@ const Contact = () => {
                 >
                     Send
                 </Button>
+                </div>
             </div>
-        </div>
+            </div>
+        </section>
     );
 };
 

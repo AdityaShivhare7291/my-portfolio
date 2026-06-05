@@ -6,21 +6,24 @@ const FullProjectModal = (props: any) => {
     const btn =useMatches({xs:'xs',sm:'sm',md:'md',lg:'lg'});
     return <Modal.Root scrollAreaComponent={ScrollArea.Autosize} size="auto" centered className=" font-mono" opened={props.opened} onClose={props.close}>
         <Modal.Overlay className="!backdrop-opacity-85 blur-sm" />
-        <Modal.Content className="!rounded-3xl">
+        <Modal.Content className="!rounded-3xl !bg-transparent">
             <Modal.Header className="!bg-bgColor xs-mx:!p-2  !border-primaryColor  !border-2 !border-b-0 !rounded-tl-3xl !rounded-tr-3xl">
-                <Modal.Title data-autofocus className="!text-4xl sm-mx:!text-3xl xs-mx:!text-2xl xsm-mx:!text-xl text-white flex gap-3 xs-mx:gap-1 items-center !font-bold">{props.title}{props.live === true && <Badge className="flex items-center gap-1" size={download} variant="outline" color="red" rightSection={<Indicator color="red" position="middle-end" size={10} processing></Indicator>} >Live</Badge>}</Modal.Title>
+                <Modal.Title data-autofocus className="!text-4xl sm-mx:!text-3xl xs-mx:!text-2xl xsm-mx:!text-xl text-white flex flex-col gap-2 !font-bold">
+                    <div className="terminal-tag w-fit">cat project-details.json</div>
+                    <div className="flex gap-3 xs-mx:gap-1 items-center">{props.title}{props.live === true && <Badge className="flex items-center gap-1" size={download} variant="outline" color="red" rightSection={<Indicator color="red" position="middle-end" size={10} processing></Indicator>} >Live</Badge>}</div>
+                </Modal.Title>
                 <Modal.CloseButton size="md" iconSize="30px" className="!bg-bgColor !text-red-500" />
             </Modal.Header>
             <Modal.Body className="!bg-bgColor xs-mx:!p-2 !pt-2 !border-primaryColor  !border-2 !border-t-0 !rounded-bl-3xl !rounded-br-3xl">
                 <Image
-                    className="!rounded-xl !shadow-[0_0_5px_0_#64FFDA]"
+                    className="project-image !rounded-xl !shadow-[0_0_5px_0_#64FFDA]"
                     src={`${process.env.PUBLIC_URL}/${props.image}`}
                     alt={props.image}
                 />
                 <div className="flex flex-wrap gap-3 xs-mx:gap-2 my-3">
                     {props.technologies.map((tech: string, index: number) => <Badge key={index} size={techno} variant="light" color="#64FFDA">{tech}</Badge>)}
                 </div>
-                <Text className="!text-justify !text-lg sm-mx:!text-base xs-mx:!text-xs"  c="dimmed">
+                <Text className="terminal-copy !text-justify !text-lg sm-mx:!text-base xs-mx:!text-xs"  c="dimmed">
                     {props.desc}
                 </Text>
                 <Group justify="space-between" mt="md" mb={3} >

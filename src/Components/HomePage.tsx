@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import About from "./About";
+import Contact from "./Contact";
 import Experience from "./Experience";
 import Footer from "./Footer";
 import Header from "./Header"
@@ -8,6 +9,7 @@ import Mail from "./Mail";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Social from "./Social";
+import TerminalConsole from "./TerminalConsole";
 import { Toaster } from "react-hot-toast";
 
 const HomePage = () => {
@@ -25,10 +27,11 @@ const HomePage = () => {
                 <main className="px-6 pt-28 pb-10 sm-mx:px-3">
                     <div className="mx-auto flex w-full max-w-7xl flex-col gap-10">
                         <About />
+                        <TerminalConsole />
                         <Experience />
                         <Skills />
                         <Projects />
-                        {/* <Contact /> */}
+                        <Contact />
                         <Footer />
                     </div>
                 </main>

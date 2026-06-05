@@ -18,9 +18,11 @@ const TimelineItem = (items: any) => {
                     <div className="text-lg font-semibold text-textColor md-mx:text-base sm-mx:text-sm xs-mx:text-xs">{item.company} &#x2022; {item.date}</div>
                 </div>
             </div>
-            <div className="text-textColor leading-6 text-justify md-mx:text-sm xs-mx:text-xs ">
-                {item.desc}
-            </div>
+            <ul className="terminal-copy experience-points md-mx:text-sm xs-mx:text-xs">
+                {item.desc.map((point: string, pointIndex: number) => (
+                    <li key={pointIndex}>{point}</li>
+                ))}
+            </ul>
 
             <div className="text-lg font-medium text-textColor md-mx:text-base sm-mx:text-sm xs-mx:text-xs flex gap-1"><div className="font-semibold text-white">Skills:</div>
                 <div className="flex gap-1 flex-wrap">
@@ -44,7 +46,13 @@ const Experience = () => {
     })
     return <section className="terminal-shell font-mono" id="Experience">
         <div className="terminal-inner">
-        <h1 className="section-title"><span className="section-kicker">02.&nbsp;</span>Experience</h1>
+        <div className="section-head">
+            <div className="section-title-wrap">
+                <h1 className="section-title"><span className="section-kicker">02.&nbsp;</span>Experience</h1>
+                <p className="section-subcopy">Production work across backend systems, browser tooling, and full-stack product delivery with ownership over implementation and performance.</p>
+            </div>
+            <div className="section-meta">3 Roles Logged</div>
+        </div>
         <Timeline color="#64FFDA" active={5} bulletSize={dot} lineWidth={2}>
             {
                 TimelineItem(ExperienceInfo)

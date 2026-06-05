@@ -10,6 +10,12 @@ const Footer=()=>{
         <div className="terminal-inner flex flex-col gap-3 items-center text-center">
         <div className="terminal-tag">session complete</div>
         <div className="text-3xl md-mx:text-2xl text-primaryColor font-semibold" style={{fontFamily:"'Space Grotesk', sans-serif"}}>{Info.name}</div>
+        <div className="footer-links">
+            <span>build</span>
+            <span>ship</span>
+            <span>iterate</span>
+            <span>collaborate</span>
+        </div>
         <div className="md-mx:flex hidden text-textColor gap-8 sm-mx:gap-6">{socialIcons}</div>
         <div className="text-textColor text-xl md-mx:text-lg sm-mx:text-base xs-mx:text-sm xs-mx:flex flex-col items-center">Copyright &copy; {new Date().getFullYear()} {Info.name} <span className="xs-mx:hidden">|</span> <span>All Rights Reserved</span></div>
         </div>

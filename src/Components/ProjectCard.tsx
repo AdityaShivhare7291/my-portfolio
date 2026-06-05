@@ -6,10 +6,10 @@ const ProjectCard = (props: any) => {
     const badge=useMatches({
         xsm:"sm", md:"md", lg:"lg"
     });
-    return <div className="w-[32%] lg-mx:w-[46%] md-mx:w-[48%] sm-mx:w-[90%] xs-mx:w-full" data-aos="fade-up" data-aos-duration="800"><Card onClick={open}  className="!bg-[#0d1914] cursor-pointer transition-transform duration-300 ease-in-out hover:!scale-[1.02] mb-5 hover:!shadow-[0_0_18px_1px_#64FFDA55] xs-mx:!shadow-[0_0_10px_1px_#64FFDA60] !border-primaryColor/35 border-2 !rounded-[24px]"  shadow="lg" padding="sm" radius="lg" withBorder>
+    return <div className="project-card-shell" data-aos="fade-up" data-aos-duration="800"><Card onClick={open}  className="!bg-[#0d1914] cursor-pointer transition-transform duration-300 ease-in-out hover:!scale-[1.02] mb-5 hover:!shadow-[0_0_18px_1px_#64FFDA55] xs-mx:!shadow-[0_0_10px_1px_#64FFDA60] !border-primaryColor/35 border-2 !rounded-[24px] !h-full"  shadow="lg" padding="sm" radius="lg" withBorder>
         <Card.Section className="p-3">
             <Image
-                className="!rounded-xl !shadow-[0_0_10px_0_#64FFDA33]"
+                className="project-image !rounded-xl !shadow-[0_0_10px_0_#64FFDA33]"
                 src={`${process.env.PUBLIC_URL}/${props.image}`}
                 alt={props.image}
             />
@@ -23,12 +23,12 @@ const ProjectCard = (props: any) => {
         <Group mb="sm" className="!gap-2">
             {props.technologies.map((tech: string, index: number) => index < 3 && <Badge key={index} size={badge} variant="light" color="#64FFDA" className="!bg-primaryColor/10 !text-primaryColor">{tech}</Badge>)}
         </Group>
-        <Text className="!text-justify !text-sm xs-mx:!text-xs" lineClamp={5} size="sm" c="dimmed">
+        <Text className="terminal-copy !text-justify !text-sm xs-mx:!text-xs" lineClamp={5} size="sm" c="dimmed">
             {props.desc}
         </Text>
 
         <Button onClick={open} className="!border-primaryColor/50 !bg-[#12211b] hover:!bg-[#162a21]" color="#64FFDA" variant="outline" mt="md" radius="md">
-            Show More
+            cat project-details.json
         </Button>
     </Card>
         <FullProjectModal opened={opened} close={close} title={props.title} desc={props.desc} image={props.image} live={props.live} link={props.link} github={props.github} technologies={props.technologies} />
