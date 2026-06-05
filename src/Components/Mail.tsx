@@ -5,7 +5,7 @@ const Mail = () => {
                 adityashivhare7291@gmail.com
             </a>
         </div>
-        <hr className="border w-40 rounded-full  bg-textColor border-textColor" />
+        <hr className="border w-40 rounded-full bg-primaryColor/50 border-primaryColor/50" />
     </div>
 }
 export default Mail;

@@ -1,7 +1,5 @@
 // import { IconHexagonLetterK } from "@tabler/icons-react";
 import SideBar from "./SideBar";
-import { useMediaQuery } from "@mantine/hooks";
-import { em } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 const links = ["About", "Experience", "Skills", "Projects", "Contact"];
@@ -10,18 +8,18 @@ const navLinks = (col: Boolean, clicked: any) => {
         if (clicked) clicked();
     }
     return links.map((link, index) => {
-        return <a key={index} onClick={handleClick} className={`${col ? 'flex flex-col items-center' : ''} text-textColor text-lg font-mono hover:text-primaryColor`} href={`#${link}`}><span className="text-primaryColor"> </span>{link}</a>
+        return <a key={index} onClick={handleClick} className={`${col ? 'flex flex-col items-center rounded-xl border border-transparent px-4 py-3 bg-[#0f1c16] hover:border-primaryColor/40 w-full' : ''} text-textColor text-sm uppercase tracking-[0.24em] font-mono hover:text-primaryColor transition-colors duration-300`} href={`#${link}`}><span className="text-primaryColor">$</span>{link}</a>
     })
 }
 
 const IconHexagonLetterPortfolio = () => (
     <div className="flex justify-center items-center">
-        <div className="relative w-24 h-14 bg-green-400">
-            <div className="absolute -top-3.5 w-0 h-0 border-l-12 border-r-12 border-b-[14px] border-l-transparent border-r-transparent border-b-green-400"></div>
-            <div className="absolute -bottom-3.5 w-0 h-0 border-l-12 border-r-12 border-t-[14px] border-l-transparent border-r-transparent border-t-green-400"></div>
-            <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm">
-                Portfolio
-            </span>
+        <div className="rounded-2xl border border-primaryColor/40 bg-[#0b1712]/90 px-4 py-3 shadow-[0_0_28px_rgba(111,255,214,0.12)]">
+            <div className="text-[11px] uppercase tracking-[0.34em] text-primaryColor">boot.log</div>
+            <div className="mt-1 flex items-center gap-2 text-white">
+                <span className="text-primaryColor">$</span>
+                <span className="font-semibold tracking-[0.18em]">portfolio.exe</span>
+            </div>
         </div>
     </div>
 );
@@ -30,7 +28,6 @@ const IconHexagonLetterPortfolio = () => (
 
 
 const Header = () => {
-    const isMobile = useMediaQuery(`(max-width: ${em(476)})`);
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [shadow, setShadow] = useState(false);
@@ -46,13 +43,14 @@ const Header = () => {
         return () => window.removeEventListener('scroll', controlNavbar);
     })
     return (
-        <nav className={`flex ${show ? "translate-y-0" : "-translate-y-28"} ${shadow ? "shadow-[0px_10px_30px_-10px_#020c1b]" : ""} transition-transform duration-500 ease-in-out fixed w-full z-10 bg-bgColor h-28  px-10  justify-between items-center xs-mx:px-4 xs-mx:h-20 `}>
-
+        <nav className={`mx-auto flex ${show ? "translate-y-0" : "-translate-y-28"} ${shadow ? "shadow-[0px_10px_30px_-10px_rgba(0,0,0,0.55)]" : ""} transition-transform duration-500 ease-in-out fixed left-0 right-0 top-0 z-10 w-full justify-center px-6 py-4 xs-mx:px-3`}>
+            <div className="flex h-24 w-full max-w-7xl items-center justify-between rounded-[26px] border border-primaryColor/15 bg-[#08110d]/85 px-8 backdrop-blur-xl xs-mx:h-20 xs-mx:px-4">
             <IconHexagonLetterPortfolio />
             <div className="bs:flex gap-8 hidden">
                 {navLinks(false, null)}
             </div>
             <SideBar />
+            </div>
         </nav>
     );
 }

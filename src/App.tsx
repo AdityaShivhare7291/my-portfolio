@@ -16,6 +16,10 @@ function App() {
   }, []);
 
   const theme = createTheme({
+    fontFamily: "'IBM Plex Mono', monospace",
+    headings: {
+      fontFamily: "'Space Grotesk', sans-serif",
+    },
     breakpoints: {
       'xs': '320px',
       'sm': '476px',

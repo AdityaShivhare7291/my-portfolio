@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import About from "./About";
-import Contact from "./Contact";
 import Experience from "./Experience";
 import Footer from "./Footer";
 import Header from "./Header"
@@ -18,16 +17,22 @@ const HomePage = () => {
             setLoading(false);
         }, 5000)
     }, [])
-    return <div className={` focus-visible:[&_button]:!outline-none min-h-[100dvh] ${loading ? "flex" : ""} items-center overflow-hidden justify-center`}>
+    return <div className={`focus-visible:[&_button]:!outline-none min-h-[100dvh] ${loading ? "flex" : ""} items-center overflow-x-hidden justify-center bg-transparent`}>
         {loading !== true ? <>
             <Toaster />
-            <Header />
-            <About />
-            <Experience />
-            <Skills />
-            <Projects />
-            {/* <Contact /> */}
-            <Footer />
+            <div className="relative w-full">
+                <Header />
+                <main className="px-6 pt-28 pb-10 sm-mx:px-3">
+                    <div className="mx-auto flex w-full max-w-7xl flex-col gap-10">
+                        <About />
+                        <Experience />
+                        <Skills />
+                        <Projects />
+                        {/* <Contact /> */}
+                        <Footer />
+                    </div>
+                </main>
+            </div>
             <Mail />
             <Social />
         </> :
